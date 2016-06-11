@@ -1,0 +1,28 @@
+
+CupDrone.name=CupDrone_STM
+
+CupDrone.upload.tool               	= stm32ld
+CupDrone.upload.protocol           	= something
+CupDrone.upload.maximum_size       	= 49152
+CupDrone.upload.ram.maximum_size   	= 17000
+CupDrone.upload.flash.maximum_size 	= 49152
+
+
+CupDrone.bootloader.tool				= stm32ld
+CupDrone.bootloader.file				= baram/CupDrone_Boot.bin
+
+
+CupDrone.build.board=CupDrone
+CupDrone.build.mcu=cortex-m3
+CupDrone.build.family=cortex-m3
+CupDrone.build.arch=SAM
+CupDrone.build.f_cpu=72000000L
+CupDrone.build.usb_product="CupDrone"
+CupDrone.build.core=arduino
+CupDrone.build.extra_flags=-mthumb -DSTM32_MEDIUM_DENSITY -DMCU_STM32F103CB -DVECT_TAB_FLASH -DBOARD_CUPDRONE
+CupDrone.build.ldscript=linker_scripts/gcc/flash.ld
+CupDrone.build.variant=CupDrone
+CupDrone.build.variant_system_lib=libcs3_stm32_med_density.a
+
+
+
